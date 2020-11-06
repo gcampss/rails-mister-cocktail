@@ -11,11 +11,11 @@
 <h2><%= @cocktail.name %></h2>
 <div class="mb-4">
   <%= link_to cocktails_path do %>
-    &larr; Back to list
+    &larr; Voltar
   <% end %>
 </div>
 
-<h3>Ingredients:</h3>
+<h3>Ingredientes:</h3>
 
 <% if alert.present? %>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -33,8 +33,8 @@
       <li>
         <%= dose.description %> <%= dose.ingredient.name %>
         <%= link_to dose_path(dose), method: :delete,
-          data: { confirm: 'Really?!', toggle: 'tooltip', placement: 'top' },
-          title: 'Delete ingredient',
+          data: { confirm: 'HAM?!', toggle: 'tooltip', placement: 'top' },
+          title: 'Deletar ingrediente',
           class: 'text-danger' do %>
           <small><i class="fa fa-trash"></i></small>
         <% end %>
@@ -43,13 +43,12 @@
   </ul>
 <% else %>
   <p class="empty-state">
-    No ingredients added, please use the button below to add new ingredients to
-    your cocktail.
+    Você ainda não adicionou o mé meu patrão, escolha uma das opções abaixo, porfa!
   </p>
 <% end %>
 
 <div>
   <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-sm btn-outline-secondary' do %>
-    <i class="fa fa-plus"></i> Add ingredient dose
+    <i class="fa fa-plus"></i> Adicione a quantidade de sua dose
   <% end %>
 </div>

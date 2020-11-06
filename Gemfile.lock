@@ -177,8 +177,6 @@ GEM
       rspec-mocks (~> 3.8)
       rspec-support (~> 3.8)
     rspec-support (3.10.0)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -244,7 +242,7 @@ DEPENDENCIES
   rails-controller-testing
   rest-client
   rspec-rails (= 4.0.0.beta3)
-  sass-rails (>= 6)
+  sassc-rails
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

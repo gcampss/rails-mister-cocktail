@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>🍹 Le Cocktail</title>
+    <title>🍹 Bar Bambi App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,9 +15,9 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <div class="container">
-        <%= link_to 'Mr Cocktail! 🍹', root_path, class: 'navbar-brand' %>
+        <%= link_to 'Bar Bambi 🍹', root_path, class: 'navbar-brand' %>
         <%= link_to new_cocktail_path, class: 'btn btn-sm btn-outline-primary' do %>
-          <i class="fa fa-plus"></i> Add new cocktail
+          <i class="fa fa-plus"></i> Adicione um gole top!
         <% end %>
       </div>
     </nav>
@@ -26,7 +26,7 @@
       <%= yield %>
 
       <footer class="mt-5">
-        &copy; <%= Date.today.year %> Le Wagon All Rights Reserved
+        &copy; <%= Date.today.year %> Chavusca All Rights Reserved
       </footer>
     </div>
   </body>
