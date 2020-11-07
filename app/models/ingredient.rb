@@ -3,6 +3,6 @@ class Ingredient < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   scope :ordered, -> { order(name: :asc) }
-  has_one_attached :photo
+ 
 end
 

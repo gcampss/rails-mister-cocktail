@@ -8,12 +8,19 @@
   </div>
 <% end %>
 
-<h2><%= @cocktail.name %></h2>
+<%if @cocktail.photo.attached?%>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+  <h2><%= @cocktail.name %></h2>
+  <% else%>
+  <% end %>
+</div>
+
 <div class="mb-4">
   <%= link_to cocktails_path do %>
     &larr; Voltar
   <% end %>
 </div>
+
 
 <h3>Ingredientes:</h3>
 
