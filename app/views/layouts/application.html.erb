@@ -15,11 +15,12 @@
   <body>
     <nav class="navbar navbar-light bg-light bg-white">
       <div class="container">
-    
+        <%= link_to root_path do %>
         <%= cl_image_tag("bambi_irrcs8.jpg", :width=>50, :height=>50, :radius=>"20", :crop=>"fill") %>
-    
+        <% end %>
+       
 
-        <%= link_to 'Bar Bambi 🍹', root_path, class: 'navbar-brand' %>
+        
         <%= link_to new_cocktail_path, class: 'btn btn-sm btn-outline-warning' do %>
           <i class="fa fa-plus"></i> Adicione um gole top!
         <% end %>
@@ -28,15 +29,6 @@
 
     <div class="container mt-5">
       <%= yield %>
-
-     <div class= "d-flex p-3">
-      <footer class="mt-5">
-      <div id=footer>
-        &copy; <%= Date.today.year %> Chavusca All Rights Reserved
-      </footer>
-      </div>
-    </div>
-      
       
     </div>
   </body>
