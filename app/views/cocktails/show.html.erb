@@ -1,3 +1,5 @@
+
+
 <% if notice.present? %>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <%= notice.html_safe %>
@@ -15,14 +17,13 @@
   <% end %>
 </div>
 
-<div class="mb-4">
+<div class="d-flex p-3">
   <%= link_to cocktails_path do %>
     &larr; Voltar
   <% end %>
 </div>
 
-
-<h3>Ingredientes:</h3>
+<h3 class= "d-flex p-3">Ingredientes:</h3>
 
 <% if alert.present? %>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -33,6 +34,7 @@
     </button>
   </div>
 <% end %>
+
 
 <% if @cocktail.doses.any? %>
   <ul>
@@ -49,13 +51,14 @@
     <% end %>
   </ul>
 <% else %>
-  <p class="empty-state">
+  <p class="d-flex p-3">
     Você ainda não adicionou o mé meu patrão, escolha uma das opções abaixo, porfa!
   </p>
 <% end %>
 
-<div>
-  <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-sm btn-outline-secondary' do %>
+<div class="d-flex p-3">
+  <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-sm btn-outline-warning' do %>
     <i class="fa fa-plus"></i> Adicione a quantidade de sua dose
   <% end %>
+  </div>
 </div>
