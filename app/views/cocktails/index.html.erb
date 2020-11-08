@@ -1,6 +1,7 @@
 <% if @cocktails.any? %>
 
 <div class="mb-5">
+<div id="center">
   <h3><strong>Bar Bambi App</strong></h3>
   <h6><i>Faça o seu próprio drink</i></h6>
 
@@ -9,6 +10,7 @@
   {:effect=>"outline:15:200", :color=>"orange"}
   ]) %>
 
+</div>
 </div>
   
 
@@ -28,13 +30,17 @@
 <% else %>
   <h3>EEEEITA LASQUEIRA! 🥃 </h3>
   <h6><i>Faça o seu próprio drink</i></h6>
+  <div class="chico-center">
   <%= cl_image_tag("CHIQUINHO_sjynoc.jpg", :transformation=>[
   {:height=>200, :crop=>"scale"},
   {:effect=>"outline:15:200", :color=>"orange"}
   ]) %>
+  </div>
+ 
 
-  <p class="empty-state">
+  <p>
     Pra encher a cara primeiro adicione um gole top!
+    <br>
     <strong><%= link_to 'adicionando sua bebida', new_cocktail_path %></strong>!
   </p>
 <% end %>

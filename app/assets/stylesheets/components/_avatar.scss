@@ -19,13 +19,36 @@
   border: white 1px solid;
 }
 
-h6 {
-  text-align: left;
+h6, h2, h3, p {
+  text-align: center;
 }
 
-#footer {
-  position : absolute;
-  bottom : 0;
-  height : 40px;
-  margin-top : 40px;
+ul, i {
+  text-align: center;
+ 
+  list-style-type: none;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: inline;
+
+}
+
+#center {
+  text-align: center;
+}
+
+.normal {
+ 
+  text-align: center;
+}
+
+.responsive
+{
+  text-align: center;
+}
+
+.chico-center {
+  text-align: center
 }
