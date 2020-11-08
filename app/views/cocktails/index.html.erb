@@ -27,6 +27,12 @@
   </ul>
 <% else %>
   <h3>EEEEITA LASQUEIRA! 🥃 </h3>
+  <h6><i>Faça o seu próprio drink</i></h6>
+  <%= cl_image_tag("CHIQUINHO_sjynoc.jpg", :transformation=>[
+  {:height=>200, :crop=>"scale"},
+  {:effect=>"outline:15:200", :color=>"orange"}
+  ]) %>
+
   <p class="empty-state">
     Pra encher a cara primeiro adicione um gole top!
     <strong><%= link_to 'adicionando sua bebida', new_cocktail_path %></strong>!
