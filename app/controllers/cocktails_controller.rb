@@ -1,10 +1,13 @@
 class CocktailsController < ApplicationController
+
+  before_action :set_cocktail, only: [:show, :destroy] 
+
   def index
     @cocktails = Cocktail.all.order(name: :asc)
   end
   
   def show
-    @cocktail = Cocktail.find(params[:id])
+    
   end
   
   def new
@@ -20,10 +23,20 @@ class CocktailsController < ApplicationController
       render :new
       end
   end
+
+  def destroy
+    
+    @cocktail.destroy
+    redirect_to root_path
+  end
   
   private
   
   def cocktails_params
     params.require(:cocktail).permit(:name, :photo)
   end
+end
+
+def set_cocktail
+  @cocktail = Cocktail.find(params[:id])
 end

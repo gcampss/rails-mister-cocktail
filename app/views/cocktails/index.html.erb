@@ -8,6 +8,12 @@
     <% @cocktails.each do |cocktail| %>
       <li>
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
+           <%= link_to cocktail_path(cocktail), method: :delete,
+          data: { confirm: 'HAM?!', toggle: 'tooltip', placement: 'top' },
+          title: 'Deletar ingrediente',
+          class: 'text-danger' do %>
+          <small><i class="fa fa-trash"></i></small>
+        <% end %>
       </li>
     <% end %>
   </ul>
